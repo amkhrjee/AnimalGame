@@ -15,6 +15,8 @@ namespace AnimalGame
         DispatcherTimer timer = new DispatcherTimer();
         int tenthsOfSecondsElapsed;
         int matchesFound;
+        bool timerStart = false;
+
         public MainWindow()
         {
             InitializeComponent();
@@ -62,7 +64,13 @@ namespace AnimalGame
                 }
             }
 
-            timer.Start();
+            //mainButton.Content = "Start Timer";
+
+
+            //if (timerStart)
+            //{
+            //    timer.Start();
+            //}
             tenthsOfSecondsElapsed = 0;
 
         }
@@ -96,6 +104,21 @@ namespace AnimalGame
             if (matchesFound == 8)
             {
                 SetUpGame();
+            }
+        }
+
+        private void mainButton_Click(object sender, RoutedEventArgs e)
+        {
+            timerStart = !timerStart;
+            if (timerStart)
+            {
+                mainButton.Content = "Stop Timer";
+                timer.Start();
+            }
+            else
+            {
+                mainButton.Content = "Start Timer";
+                timer.Stop();
             }
         }
     }
