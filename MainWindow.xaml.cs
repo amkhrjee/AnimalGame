@@ -64,13 +64,7 @@ namespace AnimalGame
                 }
             }
 
-            //mainButton.Content = "Start Timer";
-
-
-            //if (timerStart)
-            //{
-            //    timer.Start();
-            //}
+            resetButton.Visibility = Visibility.Hidden;
             tenthsOfSecondsElapsed = 0;
 
         }
@@ -112,14 +106,22 @@ namespace AnimalGame
             timerStart = !timerStart;
             if (timerStart)
             {
+                resetButton.Visibility = Visibility.Hidden;
                 mainButton.Content = "Stop Timer";
                 timer.Start();
             }
             else
             {
                 mainButton.Content = "Start Timer";
+                resetButton.Visibility = Visibility.Visible;
                 timer.Stop();
             }
+        }
+
+        private void resetButton_Click(object sender, RoutedEventArgs e)
+        {
+            tenthsOfSecondsElapsed = 0;
+            timeTextBlock.Text = "0.0s";
         }
     }
 }

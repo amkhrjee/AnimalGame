@@ -42,6 +42,6 @@
         <TextBlock Grid.Column="3" HorizontalAlignment="Center" Grid.Row="3" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Center" FontSize="20" Cursor="Hand" MouseDown="TextBlock_MouseDown"/>
         <TextBlock x:Name="timeTextBlock" HorizontalAlignment="Center" Grid.Row="4" TextWrapping="Wrap" Text="0.0s" VerticalAlignment="Center" FontSize="20" Grid.ColumnSpan="4" MouseDown="TimeTextBlock_MouseDown"/>
         <Button x:Name="mainButton" Content="Start Timer" HorizontalAlignment="Left" Grid.Row="5" VerticalAlignment="Center" Grid.ColumnSpan="2" Height="44" Width="180" Cursor="Hand" Click="mainButton_Click" FontSize="18" Margin="8,0,0,0" Grid.Column="1"/>
-        <Button x:Name="resetButton" Grid.Column="3" Content="⏱️" HorizontalAlignment="Center" Grid.Row="5" VerticalAlignment="Center" Cursor="Hand"/>
+        <Button x:Name="resetButton" Grid.Column="3" Content="⏱️" HorizontalAlignment="Center" Grid.Row="5" VerticalAlignment="Center" Cursor="Hand" Click="resetButton_Click"/>
     </Grid>
 </Window>
