@@ -8,7 +8,7 @@
         Title="Find the match!" Height="543" Width="392" ResizeMode="CanMinimize">
     <Grid x:Name="mainGrid" ShowGridLines="False">
         <Grid.Background>
-            <ImageBrush Opacity="0.5" ImageSource="/Screenshot_20230224_121033.png"/>
+            <ImageBrush Opacity="0.75" ImageSource="/Screenshot_20230224_121033.png"/>
         </Grid.Background>
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
